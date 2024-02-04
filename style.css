@@ -1,0 +1,54 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1E1E1E;
+  color: white;
+  font-family: 'Fira sans', sans-serif;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+}
+
+.slide {
+  min-height: 80vh;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  flex: 1;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  transition: all 0.5s ease-in-out;
+}
+
+.slide h3 {
+  position: absolute;
+  font-size: 24px;
+  left: 20px;
+  bottom: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.slide.active {
+  flex: 5;
+}
+
+.slide.active h3 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
